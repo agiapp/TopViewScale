@@ -47,6 +47,8 @@ static NSString *cellID = @"cell";
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
         // 设置表格的间距(上，左，下，右)
         _tableView.contentInset = UIEdgeInsetsMake(kHeaderH, 0, 0, 0);
+        // 设置滚动指示器的间距（即滑动条的位置）
+        _tableView.scrollIndicatorInsets = _tableView.contentInset;
         [self.view addSubview:_tableView];
     }
     return _tableView;
