@@ -21,7 +21,7 @@
     BRHomeViewController *homeVC = [[BRHomeViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homeVC];
     self.window.rootViewController = nav;
-    [self.window makeKeyWindow];
+    [self.window makeKeyAndVisible];
     
     return YES;
 }

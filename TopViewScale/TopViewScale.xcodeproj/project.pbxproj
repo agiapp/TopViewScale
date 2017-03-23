@@ -13,6 +13,7 @@
 		C5491C311E8374D700A11807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5491C301E8374D700A11807 /* Assets.xcassets */; };
 		C5491C341E8374D700A11807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5491C321E8374D700A11807 /* LaunchScreen.storyboard */; };
 		C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3C1E83780900A11807 /* BRHomeViewController.m */; };
+		C5491C401E837A4A00A11807 /* BRNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3F1E837A4A00A11807 /* BRNextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C5491C351E8374D700A11807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5491C3B1E83780900A11807 /* BRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRHomeViewController.h; sourceTree = "<group>"; };
 		C5491C3C1E83780900A11807 /* BRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHomeViewController.m; sourceTree = "<group>"; };
+		C5491C3E1E837A4A00A11807 /* BRNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRNextViewController.h; sourceTree = "<group>"; };
+		C5491C3F1E837A4A00A11807 /* BRNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRNextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				C5491C281E8374D700A11807 /* AppDelegate.m */,
 				C5491C3B1E83780900A11807 /* BRHomeViewController.h */,
 				C5491C3C1E83780900A11807 /* BRHomeViewController.m */,
+				C5491C3E1E837A4A00A11807 /* BRNextViewController.h */,
+				C5491C3F1E837A4A00A11807 /* BRNextViewController.m */,
 				C5491C2D1E8374D700A11807 /* Main.storyboard */,
 				C5491C301E8374D700A11807 /* Assets.xcassets */,
 				C5491C321E8374D700A11807 /* LaunchScreen.storyboard */,
@@ -154,6 +159,7 @@
 				C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */,
 				C5491C291E8374D700A11807 /* AppDelegate.m in Sources */,
 				C5491C261E8374D700A11807 /* main.m in Sources */,
+				C5491C401E837A4A00A11807 /* BRNextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
