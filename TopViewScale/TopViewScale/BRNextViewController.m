@@ -8,9 +8,12 @@
 
 #import "BRNextViewController.h"
 
+#define kHeaderH 200
 static NSString *cellID = @"cell";
+
 @interface BRNextViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic ,strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *headerView;
 
 @end
 
@@ -22,8 +25,15 @@ static NSString *cellID = @"cell";
     [self initUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // 隐藏导航栏
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 - (void)initUI {
     self.tableView.hidden = NO;
+    self.headerView.hidden = NO;
 }
 
 - (UITableView *)tableView {
@@ -35,6 +45,15 @@ static NSString *cellID = @"cell";
         [self.view addSubview:_tableView];
     }
     return _tableView;
+}
+
+- (UIView *)headerView {
+    if (!_headerView) {
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, kHeaderH)];
+        _headerView.backgroundColor = [UIColor redColor];
+        [self.view addSubview:_headerView];
+    }
+    return _headerView;
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
