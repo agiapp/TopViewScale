@@ -41,7 +41,10 @@ static NSString *cellID = @"cell";
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        // 注册单元格
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+        // 设置表格的间距(上，左，下，右)
+        _tableView.contentInset = UIEdgeInsetsMake(kHeaderH, 0, 0, 0);
         [self.view addSubview:_tableView];
     }
     return _tableView;
