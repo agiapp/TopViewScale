@@ -27,6 +27,8 @@ static NSString *cellID = @"cell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // 取消自动调整滚动视图间距 (ViewController + Nav 下会自动调整 tableView 的 contentInset)
+    self.automaticallyAdjustsScrollViewInsets = NO;
     // 隐藏导航栏
     [self.navigationController setNavigationBarHidden:YES];
 }
