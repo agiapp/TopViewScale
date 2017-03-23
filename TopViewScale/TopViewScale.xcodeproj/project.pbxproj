@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		C5491C261E8374D700A11807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C251E8374D700A11807 /* main.m */; };
 		C5491C291E8374D700A11807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C281E8374D700A11807 /* AppDelegate.m */; };
-		C5491C2C1E8374D700A11807 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C2B1E8374D700A11807 /* ViewController.m */; };
 		C5491C2F1E8374D700A11807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5491C2D1E8374D700A11807 /* Main.storyboard */; };
 		C5491C311E8374D700A11807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5491C301E8374D700A11807 /* Assets.xcassets */; };
 		C5491C341E8374D700A11807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5491C321E8374D700A11807 /* LaunchScreen.storyboard */; };
+		C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3C1E83780900A11807 /* BRHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		C5491C251E8374D700A11807 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5491C271E8374D700A11807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C5491C281E8374D700A11807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C5491C2A1E8374D700A11807 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C5491C2B1E8374D700A11807 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C5491C2E1E8374D700A11807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5491C301E8374D700A11807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5491C331E8374D700A11807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5491C351E8374D700A11807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5491C3B1E83780900A11807 /* BRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRHomeViewController.h; sourceTree = "<group>"; };
+		C5491C3C1E83780900A11807 /* BRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				C5491C271E8374D700A11807 /* AppDelegate.h */,
 				C5491C281E8374D700A11807 /* AppDelegate.m */,
-				C5491C2A1E8374D700A11807 /* ViewController.h */,
-				C5491C2B1E8374D700A11807 /* ViewController.m */,
+				C5491C3B1E83780900A11807 /* BRHomeViewController.h */,
+				C5491C3C1E83780900A11807 /* BRHomeViewController.m */,
 				C5491C2D1E8374D700A11807 /* Main.storyboard */,
 				C5491C301E8374D700A11807 /* Assets.xcassets */,
 				C5491C321E8374D700A11807 /* LaunchScreen.storyboard */,
@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					C5491C201E8374D700A11807 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 56HTN5B782;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -150,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5491C2C1E8374D700A11807 /* ViewController.m in Sources */,
+				C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */,
 				C5491C291E8374D700A11807 /* AppDelegate.m in Sources */,
 				C5491C261E8374D700A11807 /* main.m in Sources */,
 			);
@@ -270,7 +271,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56HTN5B782;
 				INFOPLIST_FILE = TopViewScale/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.renbo.TopViewScale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +284,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56HTN5B782;
 				INFOPLIST_FILE = TopViewScale/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.renbo.TopViewScale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
