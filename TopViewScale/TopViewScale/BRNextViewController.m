@@ -33,6 +33,12 @@ static NSString *cellID = @"cell";
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    // 显示导航栏（注：这里要设置显示动画，防止返回时出现导航栏覆盖当前页面）
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)initUI {
     self.tableView.hidden = NO;
     self.headerView.hidden = NO;

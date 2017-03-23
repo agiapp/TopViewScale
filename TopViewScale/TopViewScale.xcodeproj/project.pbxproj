@@ -14,6 +14,7 @@
 		C5491C341E8374D700A11807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5491C321E8374D700A11807 /* LaunchScreen.storyboard */; };
 		C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3C1E83780900A11807 /* BRHomeViewController.m */; };
 		C5491C401E837A4A00A11807 /* BRNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3F1E837A4A00A11807 /* BRNextViewController.m */; };
+		C5491C461E839A5B00A11807 /* UINavigationController+Back.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C451E839A5B00A11807 /* UINavigationController+Back.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		C5491C3C1E83780900A11807 /* BRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRHomeViewController.m; sourceTree = "<group>"; };
 		C5491C3E1E837A4A00A11807 /* BRNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRNextViewController.h; sourceTree = "<group>"; };
 		C5491C3F1E837A4A00A11807 /* BRNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRNextViewController.m; sourceTree = "<group>"; };
+		C5491C441E839A5B00A11807 /* UINavigationController+Back.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Back.h"; sourceTree = "<group>"; };
+		C5491C451E839A5B00A11807 /* UINavigationController+Back.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Back.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				C5491C3C1E83780900A11807 /* BRHomeViewController.m */,
 				C5491C3E1E837A4A00A11807 /* BRNextViewController.h */,
 				C5491C3F1E837A4A00A11807 /* BRNextViewController.m */,
+				C5491C441E839A5B00A11807 /* UINavigationController+Back.h */,
+				C5491C451E839A5B00A11807 /* UINavigationController+Back.m */,
 				C5491C2D1E8374D700A11807 /* Main.storyboard */,
 				C5491C301E8374D700A11807 /* Assets.xcassets */,
 				C5491C321E8374D700A11807 /* LaunchScreen.storyboard */,
@@ -157,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */,
+				C5491C461E839A5B00A11807 /* UINavigationController+Back.m in Sources */,
 				C5491C291E8374D700A11807 /* AppDelegate.m in Sources */,
 				C5491C261E8374D700A11807 /* main.m in Sources */,
 				C5491C401E837A4A00A11807 /* BRNextViewController.m in Sources */,
