@@ -7,13 +7,24 @@
 //
 
 #import "BRNextViewController.h"
+//#import <UIImageView+AFNetworking.h>
+#import <UIImageView+YYWebImage.h>
+#import <UIView+YYAdd.h>
 
+// 屏幕大小、宽、高
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define kHeaderH 200
 static NSString *cellID = @"cell";
 
 @interface BRNextViewController ()<UITableViewDataSource, UITableViewDelegate>
+{
+    UIView *_headerView;
+    UIView *_lineView;
+    UIImageView *_headerImageView;
+    UIStatusBarStyle _statusBarStyle; // 状态栏样式
+}
 @property (nonatomic ,strong) UITableView *tableView;
-@property (nonatomic, strong) UIView *headerView;
 
 @end
 
@@ -60,13 +71,31 @@ static NSString *cellID = @"cell";
     return _tableView;
 }
 
-- (UIView *)headerView {
-    if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, kHeaderH)];
-        _headerView.backgroundColor = [UIColor redColor];
-        [self.view addSubview:_headerView];
-    }
-    return _headerView;
+- (void)createHeaderView {
+    _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kHeaderH)];
+    _headerView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_headerView];
+    
+    _headerImageView = [[UIImageView alloc]initWithFrame:_headerView.bounds];
+    _headerImageView.backgroundColor = [UIColor orangeColor];
+    // 设置contentMode （等比例填充）
+    _headerImageView.contentMode = UIViewContentModeScaleAspectFill;
+    // 设置图像裁切（裁切外部的）
+    _headerImageView.clipsToBounds = YES;
+    [_headerView addSubview:_headerImageView];
+    
+    // 设置分割线
+    CGFloat lineHeight = 1 / [UIScreen mainScreen].scale; // 一个像素点
+    _lineView = [[UIView alloc]initWithFrame:CGRectMake(0, _headerView.height - lineHeight, SCREEN_WIDTH, lineHeight)];
+    _lineView.backgroundColor = [UIColor lightGrayColor];
+    [_headerView addSubview:_lineView];
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.who.int/entity/campaigns/immunization-week/2015/large-web-banner.jpg?ua=1"];
+    // 使用 AFNetworking 加载网络图片
+    //[_headerImageView setImageWithURL:url];
+    // 使用 YYWebImage 加载网络图片
+    [_headerImageView setImageWithURL:url options:YYWebImageOptionShowNetworkActivity];
+    
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
