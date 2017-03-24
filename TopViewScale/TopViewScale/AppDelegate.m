@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BRHomeViewController.h"
+//电池条上网络活动提示(菊花转动)
+#import <AFNetworkActivityIndicatorManager.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +24,17 @@
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homeVC];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    /**
+        AFN 加载网络图片的使用细节
+            1. 如果图片太大，有可能不会缓存
+            2. 使用的是系统默认的缓存
+        注意：如果用 SDWebImage 加载网络图片，状态栏不会显示指示器。
+             使用 YYWebImage 加载网络图片，可以设置状态栏显示指示器。
+     */
+    
+    // 设置状态栏的网络指示器
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     return YES;
 }
