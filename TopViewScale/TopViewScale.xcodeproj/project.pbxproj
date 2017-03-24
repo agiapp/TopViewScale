@@ -15,9 +15,13 @@
 		C5491C3D1E83780900A11807 /* BRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3C1E83780900A11807 /* BRHomeViewController.m */; };
 		C5491C401E837A4A00A11807 /* BRNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C3F1E837A4A00A11807 /* BRNextViewController.m */; };
 		C5491C461E839A5B00A11807 /* UINavigationController+Back.m in Sources */ = {isa = PBXBuildFile; fileRef = C5491C451E839A5B00A11807 /* UINavigationController+Back.m */; };
+		DC70266D9D630C24711E2E01 /* libPods-TopViewScale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215FF731176A0056EBEE554 /* libPods-TopViewScale.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		365340216277EB1862E33371 /* Pods-TopViewScale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopViewScale.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopViewScale/Pods-TopViewScale.release.xcconfig"; sourceTree = "<group>"; };
+		51E1A3BD7A24A3334CC375AA /* Pods-TopViewScale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopViewScale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopViewScale/Pods-TopViewScale.debug.xcconfig"; sourceTree = "<group>"; };
+		6215FF731176A0056EBEE554 /* libPods-TopViewScale.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TopViewScale.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5491C211E8374D700A11807 /* TopViewScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopViewScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5491C251E8374D700A11807 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5491C271E8374D700A11807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC70266D9D630C24711E2E01 /* libPods-TopViewScale.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17367B661EED86007BD84171 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51E1A3BD7A24A3334CC375AA /* Pods-TopViewScale.debug.xcconfig */,
+				365340216277EB1862E33371 /* Pods-TopViewScale.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90CF182B538D3704C0E87DE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6215FF731176A0056EBEE554 /* libPods-TopViewScale.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C5491C181E8374D700A11807 = {
 			isa = PBXGroup;
 			children = (
 				C5491C231E8374D700A11807 /* TopViewScale */,
 				C5491C221E8374D700A11807 /* Products */,
+				17367B661EED86007BD84171 /* Pods */,
+				90CF182B538D3704C0E87DE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5491C381E8374D700A11807 /* Build configuration list for PBXNativeTarget "TopViewScale" */;
 			buildPhases = (
+				BF3C199D43D5E4D4D63323B6 /* [CP] Check Pods Manifest.lock */,
 				C5491C1D1E8374D700A11807 /* Sources */,
 				C5491C1E1E8374D700A11807 /* Frameworks */,
 				C5491C1F1E8374D700A11807 /* Resources */,
+				506E51A4DED8D5FF72A10946 /* [CP] Embed Pods Frameworks */,
+				8DAD3DDD0AEE3F4AFD28EEB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +182,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		506E51A4DED8D5FF72A10946 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopViewScale/Pods-TopViewScale-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DAD3DDD0AEE3F4AFD28EEB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopViewScale/Pods-TopViewScale-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF3C199D43D5E4D4D63323B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5491C1D1E8374D700A11807 /* Sources */ = {
@@ -281,6 +356,7 @@
 		};
 		C5491C391E8374D700A11807 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E1A3BD7A24A3334CC375AA /* Pods-TopViewScale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 56HTN5B782;
@@ -294,6 +370,7 @@
 		};
 		C5491C3A1E8374D700A11807 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 365340216277EB1862E33371 /* Pods-TopViewScale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 56HTN5B782;
@@ -324,6 +401,7 @@
 				C5491C3A1E8374D700A11807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
