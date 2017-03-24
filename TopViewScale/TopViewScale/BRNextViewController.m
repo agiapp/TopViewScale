@@ -33,6 +33,7 @@ static NSString *cellID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    _statusBarStyle = UIStatusBarStyleLightContent;
     [self initUI];
 }
 
@@ -50,9 +51,14 @@ static NSString *cellID = @"cell";
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+// 控制当前控制器状态栏颜色
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return _statusBarStyle;
+}
+
 - (void)initUI {
     self.tableView.hidden = NO;
-    self.headerView.hidden = NO;
+    [self createHeaderView];
 }
 
 - (UITableView *)tableView {
