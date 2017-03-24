@@ -119,4 +119,34 @@ static NSString *cellID = @"cell";
     return cell;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offsetY = scrollView.contentOffset.y + kHeaderH;
+    NSLog(@"%f", offsetY);
+    if (offsetY <= 0) {
+        NSLog(@"下拉放大");
+        _headerView.top = 0;
+        _headerView.height = kHeaderH - offsetY;
+        _headerImageView.alpha = 1;
+        
+    } else if (offsetY > 0) {
+        NSLog(@"上滑整体移动");
+        _headerView.height = kHeaderH;
+       
+        // headerImageView 的最小高度
+        CGFloat minHeight = kHeaderH - 64;
+        _headerView.top = -MIN(offsetY, minHeight);
+        // 设置透明度
+        CGFloat alpha = 1 - (offsetY / minHeight);
+        _headerImageView.alpha = alpha;
+        // 根据透明度来修改状态栏的颜色
+        _statusBarStyle = alpha < 0.5 ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
+        // 主动更新状态栏
+        [self.navigationController setNeedsStatusBarAppearanceUpdate];
+    }
+    // 设置图片的高度
+    _headerImageView.height = _headerView.height;
+    // 设置分割线的位置
+    _lineView.top = _headerView.height - _lineView.height;
+}
+
 @end
