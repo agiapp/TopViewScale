@@ -33,6 +33,8 @@ static NSString *cellID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    // 此行代码能将状态栏和导航栏字体颜色全体改变,只能是黑色或白色（不用考虑导航栏的存在）
+    // self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     _statusBarStyle = UIStatusBarStyleLightContent;
     [self initUI];
 }
@@ -52,6 +54,7 @@ static NSString *cellID = @"cell";
 }
 
 // 控制当前控制器状态栏颜色
+// 注意：隐藏导航栏或没有导航栏时，此方法才会起作用。不然不能作用到当前的视图控制器上
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return _statusBarStyle;
 }
