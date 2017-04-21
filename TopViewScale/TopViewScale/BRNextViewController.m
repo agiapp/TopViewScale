@@ -66,6 +66,7 @@ static NSString *cellID = @"cell";
 
 - (UITableView *)tableView {
     if (!_tableView) {
+        // 分组样式，始末单元格分割线左对齐
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -119,8 +120,10 @@ static NSString *cellID = @"cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     cell.textLabel.text = @(indexPath.row).stringValue;
+
     return cell;
 }
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y + kHeaderH;
